@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8"> <!-- Визначення кодування символів, щоб текст правильно відображався -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Встановлює масштаб сторінки для різних пристроїв -->
+    <title>KuzminLab04-2</title> <!-- Заголовок сторінки, який відображатиметься на вкладці браузера -->
+    <style>
+        /* Оформлення фону і вирівнювання тексту по центру */
+        body {
+            background-color: lightgrey; /* Колір фону сторінки */
+            text-align: center; /* Вирівнювання всього тексту по центру */
+        }
+        /* Стилі для блоків тексту */
+        marquee {
+            font-size: 20px; /* Розмір шрифту тексту в рядках */
+            font-weight: bold; /* Жирний текст */
+            padding: 10px; /* Відступи всередині елементів */
+        }
+    </style>
+</head>
+<body>
+
+<!-- 1. Текст у рядку коливається з боку в бік -->
+<marquee behavior="alternate" bgcolor="lightblue">Текст у рядку коливається з боку в бік</marquee>
+
+<br><br> <!-- Вставка двох переносів рядка для відступу між елементами -->
+
+<!-- 2. Текст пробігає справа наліво та з'являється знову -->
+<marquee direction="left" bgcolor="lightgreen">Текст пробігає справа наліво та з'являється знову</marquee>
+
+<br><br>
+
+<!-- 3. Текст у рядку пробігає зліва направо та зупиняється -->
+<marquee direction="right" bgcolor="lightpink" loop="1">Текст у рядку пробігає зліва направо та зупиняється</marquee>
+
+<br><br>
+
+<!-- 4. Два рядки, текст у яких переміщується з різними режимами затримання -->
+<marquee direction="left" bgcolor="lightyellow" scrollamount="2">Текст повільно рухається ліворуч</marquee>
+<marquee direction="right" bgcolor="lightcoral" scrollamount="10">Текст швидко рухається праворуч</marquee>
+
+</body>
+</html>

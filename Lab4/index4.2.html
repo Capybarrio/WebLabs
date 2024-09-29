@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8"> <!-- Кодування для сторінки -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Адаптація сторінки для мобільних пристроїв -->
+  <title>KuzminLab04-3</title> <!-- Назва сторінки, що відображатиметься у вкладці -->
+  <style>
+    /* Стиль для всього тіла сторінки */
+    body {
+      background-color: #f0f0f0; /* Колір фону сторінки */
+      text-align: center; /* Вирівнювання тексту по центру */
+      font-family: Arial, sans-serif; /* Шрифт для тексту */
+    }
+    /* Стиль для рухомого тексту або зображень */
+    marquee {
+      display: block; /* Відображення як блокового елемента */
+      margin: 20px auto; /* Автоматичні поля для центрування */
+      padding: 10px; /* Внутрішні відступи */
+      width: 80%; /* Ширина елемента */
+      font-size: 18px; /* Розмір шрифту */
+      border-radius: 10px; /* Округлі кути блоку */
+    }
+    img {
+      height: 100px; /* Висота зображень */
+      margin: 0 10px; /* Відступ між зображеннями */
+    }
+  </style>
+</head>
+<body>
+
+<!-- Текст або зображення коливаються вгору -->
+<marquee behavior="alternate" direction="up" bgcolor="lightblue" style="height:150px;">Текст коливається вертикально</marquee>
+
+<br><br> <!-- Перенос рядка для відступу -->
+
+<!-- Два зображення котів рухаються знизу догори -->
+<marquee direction="up" bgcolor="lightgreen" style="height:150px;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg" alt="Кіт 1"> <!-- Перше зображення кота -->
+  <img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Felis_catus-cat_on_snow.jpg" alt="Кіт 2"> <!-- Друге зображення кота -->
+</marquee>
+
+<br><br>
+
+<!-- Два зображення котів рухаються зверху вниз -->
+<marquee direction="down" bgcolor="lightpink" style="height:150px;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/June_odd-eyed-cat_cropped.jpg" alt="Кіт 3"> <!-- Третє зображення кота -->
+  <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Cat_poster_1.jpg" alt="Кіт 4"> <!-- Четверте зображення кота -->
+</marquee>
+
+<br><br>
+
+<!-- Два рядки з різними режимами переміщення -->
+<marquee direction="up" bgcolor="lightyellow" style="height:150px;" scrollamount="3">Текст рухається повільно вгору</marquee>
+<marquee direction="down" bgcolor="lightcoral" style="height:150px;" scrollamount="10" scrolldelay="200">Текст рухається швидше вниз з затримкою</marquee>
+
+</body>
+</html>
