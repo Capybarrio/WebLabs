@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Сенсорне зображення</title>
+    <style>
+          body {
+          background-color: #f0f8ff;
+       }
+    </style>
+</head>
+<body>
+    <h1>Сенсорне зображення</h1>
+    <p>Наведіть курсор на різні частини зображення:</p>
+
+    <img src="map.jpg" width="400" height="300" usemap="#sensormap">
+
+    <map name="sensormap">
+        <area shape="rect" coords="0,0,100,100" href="#" title="Прямокутник">
+        <area shape="circle" coords="200,150,50" href="#" title="Коло">
+        <area shape="poly" coords="300,100,350,200,250,200" href="#" title="Багатокутник">
+    </map>
+</body>
+</html>
