@@ -1,0 +1,63 @@
+/* Фонове зображення сторінки */
+body {
+    background-color: #E6E6FA;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+/* "Червоний рядок" на початку абзаців */
+p {
+    text-indent: 2em;
+    text-align: justify;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-style: italic;
+    font-size: 18px; /* Змінити на бажаний розмір тексту */
+}
+
+/* Заголовок 1-го рівня */
+h1 {
+    font-weight: bold;
+    text-align: center;
+    color: #336699; /* Змінити на бажаний колір */
+}
+
+/* Стилі для посилань */
+a:link {
+    color: blue; /* Не відвідане посилання */
+}
+
+a:visited {
+    color: purple; /* Відвідане посилання */
+}
+
+a:hover {
+    color: red; /* Активне посилання */
+}
+
+/* Створимо контейнер для розміщення посилання */
+.container {
+    position: relative;
+    height: 100vh; /* Зробити висоту контейнера на всю висоту сторінки */
+}
+
+/* Позиціювання посилання внизу справа */
+.container a {
+    position: absolute;
+    bottom: 10px;  /* Відступ віднизу */
+    right: 10px;  /* Відступ справа */
+    display: inline-block;
+    text-align: right;
+}
+
+/* Центрування зображення */
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+    width: 600px;
+}
+
+
