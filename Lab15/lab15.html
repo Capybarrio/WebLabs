@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторне заняття 15</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: lightpink;
+        }
+        h1 {
+            color: #333;
+        }
+        .task {
+            margin-bottom: 20px;
+        }
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Лабораторне заняття 15</h1>
+    <p>Виберіть завдання зі списку та отримайте результат:</p>
+
+    <div class="task">
+        <label for="task-select">Завдання:</label>
+        <select id="task-select">
+            <option value="1">1. Прості числа від 0 до 100</option>
+            <option value="2">2. Числа від 0 до 10 із парністю</option>
+            <option value="3">3. Ділити число на 2 (поки результат >= 50)</option>
+            <option value="4">4. Визначення пори року та назви місяця</option>
+            <option value="5">5. Конвертація температури</option>
+            <option value="6">6. День тижня за номером</option>
+        </select>
+        <button onclick="runTask()">Виконати</button>
+    </div>
+
+    <script>
+        function runTask() {
+            const taskNumber = document.getElementById("task-select").value;
+
+            switch (taskNumber) {
+                case '1':
+                    let primes = [];
+                    for (let i = 2; i <= 100; i++) {
+                        let isPrime = true;
+                        for (let j = 2; j < i; j++) {
+                            if (i % j === 0) {
+                                isPrime = false;
+                                break;
+                            }
+                        }
+                        if (isPrime) primes.push(i);
+                    }
+                    alert("Прості числа від 0 до 100:\n" + primes.join(", "));
+                    break;
+
+                case '2':
+                    let numbers = [];
+                    for (let k = 0; k <= 10; k++) {
+                        if (k === 0) {
+                            numbers.push(`${k} – це нуль`);
+                        } else if (k % 2 === 0) {
+                            numbers.push(`${k} – парне число`);
+                        } else {
+                            numbers.push(`${k} – непарне число`);
+                        }
+                    }
+                    alert(numbers.join("\n"));
+                    break;
+
+                case '3':
+                    let numb = 10000;
+                    let result = numb;
+                    let counter = 0;
+                    while (result >= 50) {
+                        result /= 2;
+                        counter++;
+                    }
+                    alert(`Результат: ${result}\nКількість ітерацій: ${counter}`);
+                    break;
+
+                case '4':
+                    let month = parseInt(prompt("Введіть номер місяця (1-12):"));
+                    if (isNaN(month) || month < 1 || month > 12) {
+                        alert("Невірний номер місяця!");
+                        return;
+                    }
+                    let seasons = ["зима", "весна", "літо", "осінь"];
+                    let months = [
+                        "Січень", "Лютий", "Березень", "Квітень", "Травень", "Червень",
+                        "Липень", "Серпень", "Вересень", "Жовтень", "Листопад", "Грудень"
+                    ];
+                    let season = seasons[Math.floor((month % 12) / 3)];
+                    let monthName = months[month - 1];
+                    alert(`Місяць: ${monthName}\nПора року: ${season}`);
+                    break;
+
+                case '5':
+                    let tc = parseFloat(prompt("Введіть температуру у градусах Цельсія:"));
+                    if (isNaN(tc)) {
+                        alert("Введено некоректну температуру!");
+                        return;
+                    }
+                    let tf = (9 / 5) * tc + 32;
+                    alert(`Температура у Фаренгейтах: ${tf}`);
+                    break;
+
+                case '6':
+                    let day = parseInt(prompt("Введіть число від 1 до 7:"));
+                    if (isNaN(day) || day < 1 || day > 7) {
+                        alert("Невірний номер дня!");
+                        return;
+                    }
+                    let days = ["Понеділок", "Вівторок", "Середа", "Четвер", "П’ятниця", "Субота", "Неділя"];
+                    alert(`День тижня: ${days[day - 1]}`);
+                    break;
+
+                default:
+                    alert("Невірний номер завдання!");
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
