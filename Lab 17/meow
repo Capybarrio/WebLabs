@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 1</title>
+</head>
+<body>
+
+    <h1>Виведення чисел від -100 до 100</h1>
+    <p id="output"></p>
+
+    <script>
+        let output = "";
+        let num = -100;
+        while (num <= 100) {
+            output += num + " ";
+            num++;
+        }
+        document.getElementById("output").innerHTML = output;
+    </script>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 2</title>
+</head>
+<body>
+
+    <h1>Виведення парних чисел до 100</h1>
+    <p id="output"></p>
+
+    <script>
+        let output = "";
+        let num = 0;
+        do {
+            if (num % 2 === 0) {
+                output += num + " ";
+            }
+            num++;
+        } while (num <= 100);
+        document.getElementById("output").innerHTML = output;
+    </script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 3</title>
+</head>
+<body>
+
+    <h1>Ділення 1000 на 3</h1>
+    <p id="output"></p>
+
+    <script>
+        let b = 1000;
+        let count = 0;
+        while (b >= 5) {
+            b /= 3;
+            count++;
+        }
+        document.getElementById("output").innerHTML = `res: ${b} <br> count: ${count}`;
+    </script>
+
+</body>
+</html>
