@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 1.2</title>
+</head>
+<body>
+    <h2>Завдання 1.2</h2>
+    <div>
+        <a href="https://google.com">Google</a>
+        <a href="https://facebook.com">Facebook</a>
+        <a href="https://twitter.com">Twitter</a>
+    </div>
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+            function addTitle() {
+                this.title = this.href;
+            }
+            link.addEventListener('mouseover', addTitle);
+            link.addEventListener('mouseout', () => link.removeEventListener('mouseover', addTitle));
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 1.1</title>
+</head>
+<body>
+    <h2>Завдання 1.1</h2>
+    <div>
+        <img src="144302896.jpg" width="300" height="300" id="img1">
+        <img src="lenos.jpg" width="300" height="300" id="img2">
+        <img src="lan.webp" width="300" height="300" id="img3">
+    </div>
+    <script>
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('click', function() {
+                console.log(this.getAttribute('width'));
+            });
+        });
+    </script>
+</body>
+</html>

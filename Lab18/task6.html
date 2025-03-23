@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Світлофор</title>
+</head>
+<body>
+    <h2>Світлофор</h2>
+    <div class="traffic-light" style="width:100px;height:100px;border:1px solid black;"></div>
+    <div class="traffic-light" style="width:100px;height:100px;border:1px solid black;"></div>
+    <div class="traffic-light" style="width:100px;height:100px;border:1px solid black;"></div>
+    <script>
+        document.querySelectorAll('.traffic-light').forEach(div => {
+            let colors = ['red', 'yellow', 'green'];
+            let index = 0;
+            div.addEventListener('click', function() {
+                this.style.backgroundColor = colors[index];
+                index = (index + 1) % colors.length;
+            });
+        });
+    </script>
+</body>
+</html>
